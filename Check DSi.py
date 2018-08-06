@@ -70,7 +70,7 @@ if(hiyacfw == 'Y'):
 	else:
 	    output = output+'/sys/TWLFontTable.dat, '
 
-	#Region checking
+	#Regional checking
 	if(region == 'U'):
 	    if os.path.exists('./title/00030017/484e4145/content/00000002.app'):
 	        pass
