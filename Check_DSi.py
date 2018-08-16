@@ -14,7 +14,7 @@ def end():
 
 #defining variables
 missingFiles = 'You\'re missing '
-files = ['']
+files = []
 
 #choosing what to check for
 hiyacfw = input('Would you like to check for HiyaCFW files? (Y/N) ').upper()
@@ -37,7 +37,7 @@ if(hiyacfw == 'Y'):
 		print('Invalid Region')
 		end()
 if(dsimenuplusplus == 'Y'):
-	files = files + ['BOOT.NDS', '_nds/GBARunner2_fc.nds', '_nds/GBARunner2.nds', '_nds/hb-bootstrap.nds', '_nds/nds-bootstrap.ini', '_nds/nightly-bootstrap-sdk5.nds', '_nds/nightly-bootstrap.nds', '_nds/release-bootstrap-sdk5.nds', '_nds/release-bootstrap.nds', '_nds/dsimenuplusplus/dsimenu.srldr', '_nds/dsimenuplusplus/gbaswitch.srldr', '_nds/dsimenuplusplus/main.srldr', '_nds/dsimenuplusplus/nightly-bootstrap', '_nds/dsimenuplusplus/nightly-bootstrap-sdk5', '_nds/dsimenuplusplus/r4menu.srldr', '_nds/dsimenuplusplus/release-bootstrap','_nds/dsimenuplusplus/release-bootstrap-sdk5', '_nds/dsimenuplusplus/slot1launch.srldr', '_nds/dsimenuplusplus/emulators/gameyob.nds', '_nds/dsimenuplusplus/emulators/nesds.nds', '_nds/dsimenuplusplus/emulators/nestwl.nds', 'hiya/autoboot.bin', 'title/00030015/534c524e/content/00000000.app', 'title/00030015/534c524e/content/title.tmd', 'title/00030015/53524c41/content/00000000.app', 'title/00030015/53524c41/content/title.tmd']
+	files = files + ['BOOT.NDS', '_nds/GBARunner2_fc.nds', '_nds/GBARunner2.nds', '_nds/nds-bootstrap-hb-nightly.nds', '_nds/nds-bootstrap-hb-release.nds', '_nds/nds-bootstrap-nightly.nds', '_nds/nds-bootstrap-release.nds', '_nds/nds-bootstrap.ini', '_nds/dsimenuplusplus/dsimenu.srldr', '_nds/dsimenuplusplus/gbaswitch.srldr', '_nds/dsimenuplusplus/main.srldr', '_nds/dsimenuplusplus/nightly-bootstrap', '_nds/dsimenuplusplus/r4menu.srldr', '_nds/dsimenuplusplus/release-bootstrap', '_nds/dsimenuplusplus/slot1launch.srldr', '_nds/dsimenuplusplus/emulators/gameyob.nds', '_nds/dsimenuplusplus/emulators/nesds.nds', '_nds/dsimenuplusplus/emulators/nestwl.nds', 'hiya/autoboot.bin', 'title/00030015/534c524e/content/00000000.app', 'title/00030015/534c524e/content/title.tmd', 'title/00030015/53524c41/content/00000000.app', 'title/00030015/53524c41/content/title.tmd']
 if(dsimenuplusplus == hiyacfw != 'Y'):
 	print('You have not selected to check for HiyaCFW or DSiMenu++ files')
 	end()
