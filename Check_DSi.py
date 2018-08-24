@@ -22,7 +22,7 @@ requiredFiles = {
 		'shared2/0000', 
 		'shared2/launcher/wrap.bin', 
 		'sys/cert.sys', 
-		'sys/dev.kp', 
+		'sys/dev.kp',
 		'sys/HWID.sgn', 
 		'sys/HWINFO_N.dat', 
 		'sys/HWINFO_S.dat', 
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 		currentFile = file[3:]
 		# Check if HiyaCFW is installed.
 		# print(currentFile)
-		if currentFile == "hiya\settings.ini":
+		if currentFile == r"hiya\settings.ini":
 			print("HiyaCFW files detected, verifying files...")
 			HiyaFiles = requiredFiles['hiyaCFW']
 			region = input('What region is your DSi? (U/J/E/A) ').upper()
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 					region = input('What region is your DSi? (U/J/E/A) ').upper()
 			sdFiles.extend(HiyaFiles)
 		# Check if DSiMenuPlusPlus is installed.
-		elif currentFile == "_nds\dsimenuplusplus\main.srldr":
+		elif currentFile == r"_nds\dsimenuplusplus\main.srldr":
 			print("DSiMenuPlusPlus files detected, verifying files...")
 			sdFiles.extend(requiredFiles['dsimenuplusplus'])
 		else:
