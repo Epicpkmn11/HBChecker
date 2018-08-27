@@ -1,5 +1,6 @@
 import os
 import sys
+import glob
 
 #checks for python 3
 if(sys.version_info<(3,0,0)):
@@ -7,52 +8,110 @@ if(sys.version_info<(3,0,0)):
 	input('Press Enter to close')
 	quit()
 
-#creating functions
-def end():
+filesMissing = []
+scannedFiles = []
+sdFiles = []
+
+# Lists of required files
+requiredFiles = {
+	'hiyaCFW': [
+		'bootcode.dsi', 
+		'hiya/bootloader.nds', 
+		'shared1/TWLCFG0.dat', 
+		'shared1/TWLCFG1.dat', 
+		'shared2/0000', 
+		'shared2/launcher/wrap.bin', 
+		'sys/cert.sys', 
+		'sys/dev.kp',
+		'sys/HWID.sgn', 
+		'sys/HWINFO_N.dat', 
+		'sys/HWINFO_S.dat', 
+		'sys/TWLFontTable.dat'
+	],
+	'dsimenuplusplus': [
+		'BOOT.NDS', 
+		'_nds/GBARunner2_fc.nds', 
+		'_nds/GBARunner2.nds', 
+		'_nds/nds-bootstrap-hb-nightly.nds', 
+		'_nds/nds-bootstrap-hb-release.nds', 
+		'_nds/nds-bootstrap-nightly.nds', 
+		'_nds/nds-bootstrap-release.nds', 
+		'_nds/nds-bootstrap.ini', 
+		'_nds/dsimenuplusplus/dsimenu.srldr', 
+		'_nds/dsimenuplusplus/gbaswitch.srldr', 
+		'_nds/dsimenuplusplus/main.srldr', 
+		'_nds/dsimenuplusplus/nightly-bootstrap', 
+		'_nds/dsimenuplusplus/r4menu.srldr', 
+		'_nds/dsimenuplusplus/release-bootstrap', 
+		'_nds/dsimenuplusplus/slot1launch.srldr', 
+		'_nds/dsimenuplusplus/emulators/gameyob.nds', 
+		'_nds/dsimenuplusplus/emulators/nesds.nds', 
+		'_nds/dsimenuplusplus/emulators/nestwl.nds', 
+		'hiya/autoboot.bin', 
+		'title/00030015/534c524e/content/00000000.app', 
+		'title/00030015/534c524e/content/title.tmd', 
+		'title/00030015/53524c41/content/00000000.app', 
+		'title/00030015/53524c41/content/title.tmd'
+	]			
+}
+if __name__ == "__main__":
+	# Scan the files in the current work directory.
+	for path, subdirs, files in os.walk('.'):
+		for name in files:
+			filePath = os.path.join(os.getcwd(), path[2:], name)
+			scannedFiles.append(filePath)
+
+	#checking files
+	for file in scannedFiles:
+		# checks if your on Windows and removes the file path before the cwd
+		if sys.platform == "win32":
+			currentFile = file[len(os.getcwd()):]
+		else:
+			currentFile = file[(len(os.getcwd())+1):]
+		# Check if HiyaCFW is installed.
+		# print(currentFile)
+		if currentFile == os.path.join("hiya","settings.ini"):
+			print("HiyaCFW files detected, verifying files...")
+			HiyaFiles = requiredFiles['hiyaCFW']
+			region = input('What region is your DSi? (U/J/E/A) ').upper()
+			while region:
+				if(region == 'U'):
+					HiyaFiles.extend(['title/00030017/484e4145/content/title.tmd', 'title/00030017/484e4145/content/title.tmd'])
+					break
+				elif(region == 'J'):
+					HiyaFiles.extend(['title/00030017/484e414a/content/00000002.app', 'title/00030017/484e414a/content/title.tmd'])
+					break
+				elif(region == 'E'):
+					HiyaFiles.extend(['title/00030017/484e4150/content/00000002.app', 'title/00030017/484e4150/content/title.tmd'])
+					break
+				elif(region == 'A'):
+					HiyaFiles.extend(['title/00030017/484e4155/content/00000002.app', 'title/00030017/484e4155/content/title.tmd'])
+					break
+				else:
+					print('Invalid Region')
+					region = input('What region is your DSi? (U/J/E/A) ').upper()
+			sdFiles.extend(HiyaFiles)
+		# Check if DSiMenuPlusPlus is installed.
+		elif currentFile == os.path.join("_nds", "dsimenuplusplus", "main.srldr"):
+			print("DSiMenuPlusPlus files detected, verifying files...")
+			sdFiles.extend(requiredFiles['dsimenuplusplus'])
+		else:
+			pass
+
+	fileTree = sdFiles
+	for file in fileTree:
+		filePath = os.path.join(os.getcwd(), file)
+		if os.path.exists(filePath):
+			pass
+		else:
+			filesMissing.append(file)
+	if len(filesMissing) != 0:
+		print("You are missing files: \n")
+		for missingFile in filesMissing:
+			print("{}\n".format(missingFile))
+	else:
+		print('Your SD Card is good!')
+
 	input('Press Enter to quit')
 	quit()
 
-#defining variables
-missingFiles = 'You\'re missing '
-files = []
-
-#choosing what to check for
-hiyacfw = input('Would you like to check for HiyaCFW files? (Y/N) ').upper()
-if(hiyacfw == 'Y'):
-	region = input('What region is your DSi? (U/J/E/A) ').upper()
-dsimenuplusplus = input('Would you like to check for DSiMenu++ files? (Y/N) ').upper()
-
-#determining files to check
-if(hiyacfw == 'Y'):
-	files = ['bootcode.dsi', 'hiya/bootloader.nds', 'shared1/TWLCFG0.dat', 'shared1/TWLCFG1.dat', 'shared2/0000', 'shared2/launcher/wrap.bin', 'sys/cert.sys', 'sys/dev.kp', 'sys/HWID.sgn', 'sys/HWINFO_N.dat', 'sys/HWINFO_S.dat', 'sys/TWLFontTable.dat']
-	if(region == 'U'):
-		files = files + ['title/00030017/484e4145/content/00000002.app', 'title/00030017/484e4145/content/title.tmd']
-	elif(region == 'J'):
-		files = files + ['title/00030017/484e414a/content/00000002.app', 'title/00030017/484e414a/content/title.tmd']
-	elif(region == 'E'):
-		files = files + ['title/00030017/484e4150/content/00000002.app', 'title/00030017/484e4150/content/title.tmd']
-	elif(region == 'A'):
-		files = files + ['title/00030017/484e4155/content/00000002.app', 'title/00030017/484e4155/content/title.tmd']
-	else:
-		print('Invalid Region')
-		end()
-if(dsimenuplusplus == 'Y'):
-	files = files + ['BOOT.NDS', '_nds/GBARunner2_fc.nds', '_nds/GBARunner2.nds', '_nds/nds-bootstrap-hb-nightly.nds', '_nds/nds-bootstrap-hb-release.nds', '_nds/nds-bootstrap-nightly.nds', '_nds/nds-bootstrap-release.nds', '_nds/nds-bootstrap.ini', '_nds/dsimenuplusplus/dsimenu.srldr', '_nds/dsimenuplusplus/gbaswitch.srldr', '_nds/dsimenuplusplus/main.srldr', '_nds/dsimenuplusplus/nightly-bootstrap', '_nds/dsimenuplusplus/r4menu.srldr', '_nds/dsimenuplusplus/release-bootstrap', '_nds/dsimenuplusplus/slot1launch.srldr', '_nds/dsimenuplusplus/emulators/gameyob.nds', '_nds/dsimenuplusplus/emulators/nesds.nds', '_nds/dsimenuplusplus/emulators/nestwl.nds', 'hiya/autoboot.bin', 'title/00030015/534c524e/content/00000000.app', 'title/00030015/534c524e/content/title.tmd', 'title/00030015/53524c41/content/00000000.app', 'title/00030015/53524c41/content/title.tmd']
-if(dsimenuplusplus == hiyacfw != 'Y'):
-	print('You have not selected to check for HiyaCFW or DSiMenu++ files')
-	end()
-
-#checking files
-for file in files:
-	fileExists = os.path.exists(file)
-	if fileExists == False:
-		missingFiles = missingFiles + '/' + file + ', '
-
-#displaying results
-if(missingFiles != 'You\'re missing '):
-	missingFiles = missingFiles[:-2]
-	print(missingFiles)
-	end()
-else:
-	print('Your SD Card is good!')
-	end()
