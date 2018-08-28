@@ -11,6 +11,8 @@ if(sys.version_info<(3,0,0)):
 filesMissing = []
 scannedFiles = []
 sdFiles = []
+isHiyaPresent = False
+isDSiMemuPPPresnt = False
 
 # Lists of required files
 requiredFiles = {
@@ -71,6 +73,7 @@ if __name__ == "__main__":
 		# Check if HiyaCFW is installed.
 		# print(currentFile)
 		if currentFile == os.path.join("hiya","settings.ini"):
+			isHiyaPresent = True
 			print("HiyaCFW files detected, verifying files...")
 			HiyaFiles = requiredFiles['hiyaCFW']
 			region = input('What region is your DSi? (U/J/E/A) ').upper()
@@ -93,10 +96,16 @@ if __name__ == "__main__":
 			sdFiles.extend(HiyaFiles)
 		# Check if DSiMenuPlusPlus is installed.
 		elif currentFile == os.path.join("_nds", "dsimenuplusplus", "main.srldr"):
+			isDSiMemuPPPresnt = True
 			print("DSiMenuPlusPlus files detected, verifying files...")
 			sdFiles.extend(requiredFiles['dsimenuplusplus'])
 		else:
 			pass
+
+	if isHiyaPresent == False:
+		print("HiyaCFW NOT detected")
+	if isDSiMemuPPPresnt == False:
+		print("DSiMenu++ NOT detected")
 
 	fileTree = sdFiles
 	for file in fileTree:
@@ -106,7 +115,7 @@ if __name__ == "__main__":
 		else:
 			filesMissing.append(file)
 	if len(filesMissing) != 0:
-		print("You are missing files: \n")
+		print("You are missing the following files: \n")
 		for missingFile in filesMissing:
 			print("{}\n".format(missingFile))
 	else:
