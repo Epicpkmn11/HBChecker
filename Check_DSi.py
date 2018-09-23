@@ -11,7 +11,7 @@ filesMissing = []
 scannedFiles = []
 sdFiles = []
 isHiyaPresent = False
-isDSiMemuPPPresnt = False
+isTWLMemuPresnt = False
 
 # Lists of required files
 requiredFiles = {
@@ -29,30 +29,30 @@ requiredFiles = {
 		'sys/HWINFO_S.dat \nFrom your NAND backup',
 		'sys/TWLFontTable.dat \nFrom your NAND backup'
 	],
-	'dsimenuplusplus': [
-		'BOOT.NDS \nFrom the downloaded "DSiMenuPP"',
-		'_nds/GBARunner2_fc.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/GBARunner2.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/nds-bootstrap-hb-release.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/nds-bootstrap-nightly.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/nds-bootstrap-release.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/nds-bootstrap.ini \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/dsimenu.srldr \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/gbaswitch.srldr \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/main.srldr \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/nightly-bootstrap.ver \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/r4menu.srldr \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/release-bootstrap.ver \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/slot1launch.srldr \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/emulators/gameyob.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/emulators/nesds.nds \nFrom the downloaded "DSiMenuPP"',
-		'_nds/dsimenuplusplus/emulators/nestwl.nds \nFrom the downloaded "DSiMenuPP"',
-		'hiya/autoboot.bin \nFrom the downloaded "DSiMenuPP/Autoboot for HiyaCFW"',
-		'title/00030015/534c524e/content/00000000.app \nFrom the downloaded "DSiMenuPP/CFW - SDNAND root"',
-		'title/00030015/534c524e/content/title.tmd \nFrom the downloaded "DSiMenuPP/CFW - SDNAND root"',
-		'title/00030015/53524c41/content/00000000.app \nFrom the downloaded "DSiMenuPP/CFW - SDNAND root"',
-		'title/00030015/53524c41/content/title.tmd \nFrom the downloaded "DSiMenuPP/CFW - SDNAND root"'
+	'twlmenu': [
+		'BOOT.NDS \nFrom the downloaded "TWiLightMenu"',
+		'_nds/GBARunner2_fc.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/GBARunner2.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/nds-bootstrap-hb-release.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/nds-bootstrap-nightly.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/nds-bootstrap-release.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/nds-bootstrap.ini \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/dsimenu.srldr \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/gbaswitch.srldr \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/main.srldr \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/nightly-bootstrap.ver \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/r4menu.srldr \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/release-bootstrap.ver \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/slot1launch.srldr \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/emulators/gameyob.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/emulators/nesds.nds \nFrom the downloaded "TWiLightMenu"',
+		'_nds/TWiLightMenu/emulators/nestwl.nds \nFrom the downloaded "TWiLightMenu"',
+		'hiya/autoboot.bin \nFrom the downloaded "TWiLightMenu/Autoboot for HiyaCFW"',
+		'title/00030015/534c524e/content/00000000.app \nFrom the downloaded "TWiLightMenu/CFW - SDNAND root"',
+		'title/00030015/534c524e/content/title.tmd \nFrom the downloaded "TWiLightMenu/CFW - SDNAND root"',
+		'title/00030015/53524c41/content/00000000.app \nFrom the downloaded "TWiLightMenu/CFW - SDNAND root"',
+		'title/00030015/53524c41/content/title.tmd \nFrom the downloaded "TWiLightMenu/CFW - SDNAND root"'
 	]
 }
 if __name__ == "__main__":
@@ -100,23 +100,23 @@ if __name__ == "__main__":
 					print('Invalid Region')
 					region = input('What region is your DSi? (U/J/E/A) ').upper()
 			sdFiles.extend(HiyaFiles)
-		# Check if DSiMenuPlusPlus is installed.
-		elif currentFile == os.path.join("_nds", "dsimenuplusplus", "main.srldr"):
-			isDSiMemuPPPresnt = True
-			print("DSiMenu++ files detected, verifying files...")
-			sdFiles.extend(requiredFiles['dsimenuplusplus'])
+		# Check if TWLMenu is installed.
+		elif currentFile == os.path.join("_nds", "TWiLightMenu", "main.srldr"):
+			isTWLMenuPresnt = True
+			print("TWiLight Menu++ files detected, verifying files...")
+			sdFiles.extend(requiredFiles['twlmenu'])
 		else:
 			pass
 
-	# Checking if Hiya/DSiMenu++ are missing and lets you force a check
+	# Checking if Hiya/TWLMenu are missing and lets you force a check
 	if isHiyaPresent == False:
 		print("HiyaCFW NOT detected")
 		if input("Force check HiyaCFW? (Doesn't check region specific files) (Y/N) ").upper() == 'Y':
 			sdFiles.extend(requiredFiles['hiyaCFW'])
-	if isDSiMemuPPPresnt == False:
-		print("DSiMenu++ NOT detected")
-		if input("Force check DSiMenu++? (Y/N) ").upper() == 'Y':
-			sdFiles.extend(requiredFiles['dsimenuplusplus'])		
+	if isTWLMenuPresnt == False:
+		print("TWiLight Menu++ NOT detected")
+		if input("Force check TWiLight Menu++? (Y/N) ").upper() == 'Y':
+			sdFiles.extend(requiredFiles['twlmenu'])		
 
 	fileTree = sdFiles
 	for file in fileTree:
@@ -137,4 +137,3 @@ if __name__ == "__main__":
 		print('Your SD Card is good!')
 
 	input('Press Enter to quit')
-	quit()
