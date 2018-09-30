@@ -2,6 +2,12 @@
 # https://github.com/Epicpkmn11/DSi-HB-Checker/
 # The first line is used for determining if that set is present, all others are checked for after
 
+# Lets you know you ran the wrong file if you run this
+if __name__ == '__main__':
+	print('Please run "HBChecker.py", this is just a list of what to check')
+	input('Press Enter to quit')
+	quit()
+
 fileSets = {
 	'1 HiyaCFW Main': [
 		'bootcode.dsi \nThis is used to determine what to check',

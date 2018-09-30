@@ -5,6 +5,9 @@
 import os
 import sys
 
+# Preventing .pcy or __pycache__
+sys.dont_write_bytecode = True
+
 # Fixing Python 2 compatibility
 if(sys.version_info.major < (3)):
 	input = raw_input
@@ -76,7 +79,10 @@ def printMissing(missingList, printLines):
 		if printLines:
 			clear()
 		print('='*80)
-		print('No files were missing!')
+		if not printLines:
+			print('No files were missing! (^ Make sure everything you need checked was found)')
+		else:
+			print('No files were missing!')
 
 # Checking if sets exist
 for fileSet in checkFiles.fileSets:
@@ -91,7 +97,10 @@ for file in filesFound:
 	if(i+2)<filesFoundAmount:
 		fileFoundList += file + ', '
 	elif(i+1)<filesFoundAmount:
-		fileFoundList += file + ', and '
+		if filesFoundAmount==2:
+			fileFoundList += file + ' and '
+		else:
+			fileFoundList += file + ', and '
 	else:
 		fileFoundList += file
 	i+=1
@@ -100,7 +109,10 @@ for file in filesFound:
 if len(fileFoundList)>0:
 	clear()
 	print('='*80)
-	print(fileFoundList + ' were found')
+	if filesFoundAmount>1:
+		print(fileFoundList + ' were found')
+	else:
+		print(fileFoundList + ' was found')
 else:
 	print('='*80)
 	print('Nothing was found')
