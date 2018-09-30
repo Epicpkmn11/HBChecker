@@ -129,7 +129,7 @@ while True:
 	clearScreen = True
 	print('='*80)
 	print('Would you like to check for more?')
-	print('Your options are (Enter the number, press Enter to quit):')
+	print('Your options are: (Enter the number, or press Enter to quit)')
 	print('\n'+fileSetChoices)
 	manualCheck = input('> ')
 	for fileSet in checkFiles.fileSets:
