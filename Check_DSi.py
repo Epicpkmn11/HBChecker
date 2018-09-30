@@ -102,7 +102,7 @@ if __name__ == "__main__":
 			sdFiles.extend(HiyaFiles)
 		# Check if TWLMenu is installed.
 		elif currentFile == os.path.join("_nds", "TWiLightMenu", "main.srldr"):
-			isTWLMenuPresnt = True
+			isTWLMenuPresent = True
 			print("TWiLight Menu++ files detected, verifying files...")
 			sdFiles.extend(requiredFiles['twlmenu'])
 		else:
