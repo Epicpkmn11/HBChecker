@@ -11,7 +11,7 @@ filesMissing = []
 scannedFiles = []
 sdFiles = []
 isHiyaPresent = False
-isTWLMemuPresnt = False
+isTWLMenuPresent = False
 
 # Lists of required files
 requiredFiles = {
@@ -113,7 +113,7 @@ if __name__ == "__main__":
 		print("HiyaCFW NOT detected")
 		if input("Force check HiyaCFW? (Doesn't check region specific files) (Y/N) ").upper() == 'Y':
 			sdFiles.extend(requiredFiles['hiyaCFW'])
-	if isTWLMenuPresnt == False:
+	if isTWLMenuPresent == False:
 		print("TWiLight Menu++ NOT detected")
 		if input("Force check TWiLight Menu++? (Y/N) ").upper() == 'Y':
 			sdFiles.extend(requiredFiles['twlmenu'])		
