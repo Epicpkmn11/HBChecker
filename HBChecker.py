@@ -107,17 +107,21 @@ printMissing(filesMissing,False)
 
 
 fileSetsAmount = len(checkFiles.fileSets)
-i = 0
+i = 1
 for fileSet in sorted(checkFiles.fileSets):
-	if(i+2)<fileSetsAmount:
-		fileSetChoices += fileSet + ', '
-	elif(i+1)<fileSetsAmount:
-		fileSetChoices += fileSet + ', and '
+	if(i%3)!=0:
+		fileSetChoices += fileSet + '	'
+		if len(fileSet)<15:
+			fileSetChoices += '	'
 	else:
-		fileSetChoices += fileSet
+		if i<fileSetsAmount:
+			fileSetChoices += fileSet + '\n'
+		else:
+			fileSetChoices += fileSet
 	i+=1
 
 while True:
+	clearScreen = True
 	print('='*80)
 	print('Would you like to check for more?')
 	print('Your options are (Enter the number, press Enter to quit):')
@@ -128,8 +132,9 @@ while True:
 			quit()
 		if manualCheck == fileSet[:len(manualCheck)]:
 			printMissing(check(fileSet),True)
+			clearScreen = False
 			break
-		else:
-			clear()
-			print('='*80)
-			print('Invalid File Set')
+	if clearScreen:
+		clear()
+		print('='*80)
+		print('Invalid File Set')
