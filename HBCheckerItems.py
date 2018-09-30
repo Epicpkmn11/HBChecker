@@ -1,3 +1,7 @@
+# HBChecker by Epicpkmn11
+# https://github.com/Epicpkmn11/DSi-HB-Checker/
+# The first line is used for determining if that set is present, all others are checked for after
+
 fileSets = {
 	'1 HiyaCFW': [
 		'bootcode.dsi \nThis is used to determine what to check',

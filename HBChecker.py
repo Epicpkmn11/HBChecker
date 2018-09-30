@@ -1,3 +1,7 @@
+# HBChecker by Epicpkmn11
+# https://github.com/Epicpkmn11/DSi-HB-Checker/
+# Feel free to make custom HBCheckerItems.py files for other uses
+
 import os
 import sys
 
