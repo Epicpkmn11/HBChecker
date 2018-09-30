@@ -5,10 +5,11 @@
 import os
 import sys
 
-# Fixes Python 2 compatibility
+# Fixing Python 2 compatibility
 if(sys.version_info.major < (3)):
 	input = raw_input
 
+# Trying to import items file
 try:
 	import HBCheckerItems as checkFiles
 except:
@@ -20,19 +21,19 @@ except:
 
 # Creating variables
 fileSetChoices = ''
-filesFound2 = ''
-filesMissing2 = ''
+fileFoundList = ''
+filesFound = []
 filesMissing = []
-sdFiles = []
-isHiyaPresent = False
-isTWLMemuPresnt = False
 
+# Defining functions
+# Allows clearing the screen on win32 & unix-based systems
 def clear():
 	if sys.platform == "win32":
 		os.system('cls')
 	else:
 		os.system('clear')
 
+# Checks if the file sets exist
 def checkExist(fileSet):
 	found = []
 	file = checkFiles.fileSets[fileSet][0]
@@ -43,6 +44,7 @@ def checkExist(fileSet):
 		found = [fileSet]
 	return(found)
 
+# Checks if the files within a set exist
 def check(fileSet):
 	missing = []
 	files = checkFiles.fileSets[fileSet][1:]
@@ -57,6 +59,7 @@ def check(fileSet):
 			missing += [file]
 	return(missing)
 
+# Prints out the missing files from a set
 def printMissing(missingList, printLines):
 	filesMissing = ''
 	for file in missingList:
@@ -75,43 +78,41 @@ def printMissing(missingList, printLines):
 		print('='*80)
 		print('No files were missing!')
 
-
-
-filesFound = []
+# Checking if sets exist
 for fileSet in checkFiles.fileSets:
 	filesFound += checkExist(fileSet)
 
+# Preping to print sets found nicely
 i=0
 filesFoundAmount = len(filesFound)
 for file in filesFound:
 	space = file.find(' ')
 	file = file[(space+1):]
 	if(i+2)<filesFoundAmount:
-		filesFound2 += file + ', '
+		fileFoundList += file + ', '
 	elif(i+1)<filesFoundAmount:
-		filesFound2 += file + ', and '
+		fileFoundList += file + ', and '
 	else:
-		filesFound2 += file
+		fileFoundList += file
 	i+=1
 
-if len(filesFound2)>0:
+# Printing sets found
+if len(fileFoundList)>0:
 	clear()
 	print('='*80)
-	print(filesFound2 + ' were found')
+	print(fileFoundList + ' were found')
 else:
 	print('='*80)
 	print('Nothing was found')
 
-filesMissing = []
-for fileSet in filesFound:
-	filesMissing += check(fileSet)
-
+# Printing missing files
+for file in filesFound:
+	filesMissing = check(file)
 printMissing(filesMissing,False)
 
-
-
+# Prepping the file set options for manual checking
 fileSetsAmount = len(checkFiles.fileSets)
-i = 1
+i=1
 for fileSet in sorted(checkFiles.fileSets):
 	if(i%3)!=0:
 		fileSetChoices += fileSet + '	'
@@ -123,7 +124,7 @@ for fileSet in sorted(checkFiles.fileSets):
 		else:
 			fileSetChoices += fileSet
 	i+=1
-
+# Infinite loop so you can check as many options as you want
 while True:
 	clearScreen = True
 	print('='*80)
