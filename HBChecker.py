@@ -67,12 +67,15 @@ def check(fileSet):
 				if chksum != -1:
 					checkFile = open(fileCopy, 'rb')
 					buffr = checkFile.read(bufferSize)
-					crcvalue = 0
+					crcValue = 0
 					while len(buffr) > 0:
-						crcvalue = zlib.crc32(buffr, crcvalue)
+						crcValue = zlib.crc32(buffr, crcValue)
 						buffr = checkFile.read(bufferSize)
-					if intToStr(crcvalue, 16) != crc:
-						missing += [file + '\nwas corrupted: CRC-32 DIDN\'T MATCH ' + intToStr(crcvalue, 16) + ':'+ crc]
+					crcString = intToStr(crcValue, 16)
+					while len(crcString)<8:
+						crcString = '0' + crcString
+					if crcString != crc:
+						missing += [file + '\nwas corrupted: CRC-32 DIDN\'T MATCH ' + intToStr(crcValue, 16) + ':'+ crc]
 		else:
 			missing += [file + '\nwas missing']
 	return(missing)

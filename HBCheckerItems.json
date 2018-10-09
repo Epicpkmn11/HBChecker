@@ -12,12 +12,12 @@
 		"sys/HWID.sgn \nFrom your NAND backup",
 		"sys/HWINFO_N.dat \nFrom your NAND backup",
 		"sys/HWINFO_S.dat \nFrom your NAND backup",
-		"sys/TWLFontTable.dat \nFrom your NAND backup"
+		"sys/TWLFontTable.dat \nFrom your NAND backup;F1953B32"
 	],
 	"2 HiyaCFW USA": [
 		"title/00030017/484e4145/content/00000002.app \nThis is used to determine what to check",
-		"title/00030017/484e4145/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper",
-		"title/00030017/484e4145/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card'"
+		"title/00030017/484e4145/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;6BCD2F1A",
+		"title/00030017/484e4145/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';DE189355"
 	],
 	"3 HiyaCFW JPN": [
 		"title/00030017/484e414a/content/00000002.app \nThis is used to determine what to check",
@@ -36,7 +36,7 @@
 		],
 	"6 TWLMenu++": [
 		"_nds/TWiLightMenu/main.srldr \nThis is used to determine what to check",
-		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu';82D0C454",
+		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu';94F1395C",
 		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'TWiLightMenu';7B551EBC",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu';DEB4CB64",
 		"_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded 'TWiLightMenu';1823A929",
@@ -44,6 +44,7 @@
 		"_nds/nds-bootstrap-nightly.nds \nFrom the downloaded 'TWiLightMenu';149C5C0F",
 		"_nds/nds-bootstrap-release.nds \nFrom the downloaded 'TWiLightMenu';149C5C0F",
 		"_nds/nds-bootstrap.ini \nFrom the downloaded 'TWiLightMenu'",
+		"_nds/TWiLightMenu/akmenu.srldr \nFrom the downloaded 'TWiLightMenu';050726E1",
 		"_nds/TWiLightMenu/dsimenu.srldr \nFrom the downloaded 'TWiLightMenu';600F90B2",
 		"_nds/TWiLightMenu/gbaswitch.srldr \nFrom the downloaded 'TWiLightMenu';14A26AE9",
 		"_nds/TWiLightMenu/main.srldr \nFrom the downloaded 'TWiLightMenu';7E3AD804",
@@ -55,7 +56,7 @@
 		"_nds/TWiLightMenu/emulators/nesds.nds \nFrom the downloaded 'TWiLightMenu';D64FBA8A",
 		"_nds/TWiLightMenu/emulators/nestwl.nds \nFrom the downloaded 'TWiLightMenu';8174A11F",
 		"hiya/autoboot.bin \nFrom the downloaded 'TWiLightMenu/Autoboot for HiyaCFW';267D3542",
-		"title/00030015/534c524e/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';4AFA407",
+		"title/00030015/534c524e/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';04AFA407",
 		"title/00030015/534c524e/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';E1D196FE",
 		"title/00030015/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';94F1395C",
 		"title/00030015/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';5313BDA5"
