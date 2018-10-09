@@ -19,6 +19,7 @@ filesMissing = []
 fileSets = {}
 itemsFile = 'HBCheckerItems.json'
 bufferSize = 65536
+checkCRC = True
 
 # Defining functions
 # Allows clearing the screen on win32 & unix-based systems
@@ -62,15 +63,16 @@ def check(fileSet):
 			file = file[:chksum]
 
 		if os.path.exists(fileCopy):
-			if chksum != -1:
-				checkFile = open(fileCopy, 'rb')
-				buffr = checkFile.read(bufferSize)
-				crcvalue = 0
-				while len(buffr) > 0:
-					crcvalue = zlib.crc32(buffr, crcvalue)
+			if checkCRC:
+				if chksum != -1:
+					checkFile = open(fileCopy, 'rb')
 					buffr = checkFile.read(bufferSize)
-				if intToStr(crcvalue, 16) != crc:
-					missing += [file + '\nwas corrupted: CRC-32 DIDN\'T MATCH ' + intToStr(crcvalue, 16) + ':'+ crc]
+					crcvalue = 0
+					while len(buffr) > 0:
+						crcvalue = zlib.crc32(buffr, crcvalue)
+						buffr = checkFile.read(bufferSize)
+					if intToStr(crcvalue, 16) != crc:
+						missing += [file + '\nwas corrupted: CRC-32 DIDN\'T MATCH ' + intToStr(crcvalue, 16) + ':'+ crc]
 		else:
 			missing += [file + '\nwas missing']
 	return(missing)
@@ -85,7 +87,10 @@ def printMissing(missingList, printLines):
 		if printLines:
 			clear()
 		print('='*80)
-		print('The following files were missing or corrupted:')
+		if checkCRC:
+			print('The following files were missing or corrupted:')
+		else:
+			print('The following files were missing:')
 		print('='*80)
 		print('\n'+filesMissing[:-1])
 	else:
@@ -95,7 +100,10 @@ def printMissing(missingList, printLines):
 		if not printLines:
 			print('No files were missing! (^ Make sure everything you need checked was found)')
 		else:
-			print('No files were missing or corrupted!')
+			if checkCRC:
+				print('No files were missing or corrupted!')
+			else:
+				print('No files were missing!')
 
 # Loading items json file
 while True:
@@ -175,13 +183,29 @@ while True:
 	clearScreen = True
 	print('='*80)
 	print('Would you like to check for more?')
-	print('Your options are: (Enter the number, or press Enter to quit)')
+	if checkCRC:
+		print('Your options are:\n(Enter the number, 0 to disable checksum, or press Enter to quit)')
+	else:
+		print('Your options are:\n(Enter the number, 0 to enable checksum, or press Enter to quit)')
 	print('\n'+fileSetChoices)
 	manualCheck = input('> ')
 	for fileSet in fileSets:
 		if manualCheck == '':
 			quit()
-		if manualCheck == fileSet[:len(manualCheck)]:
+		elif manualCheck == '0':
+			if checkCRC:
+				checkCRC = False
+			else:
+				checkCRC = True
+			clearScreen = False
+			clear()
+			print('='*80)
+			if checkCRC:
+				print('Corruption detection enabled')
+			else:
+				print('Corruption detection disabled')
+			break
+		elif manualCheck == fileSet[:len(manualCheck)]:
 			printMissing(check(fileSet),True)
 			clearScreen = False
 			break
