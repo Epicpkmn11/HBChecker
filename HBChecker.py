@@ -5,6 +5,7 @@
 import os
 import sys
 import json
+import zlib
 
 # Fixing Python 2 compatibility
 if(sys.version_info.major < (3)):
@@ -17,6 +18,7 @@ filesFound = []
 filesMissing = []
 fileSets = {}
 itemsFile = 'HBCheckerItems.json'
+bufferSize = 65536
 
 # Defining functions
 # Allows clearing the screen on win32 & unix-based systems
@@ -25,6 +27,14 @@ def clear():
 		os.system('cls')
 	else:
 		os.system('clear')
+
+# Let's you convert a base 16 int to a string properly
+def intToStr(n,base):
+	convertString = "0123456789ABCDEF"
+	if n < base:
+		return convertString[n]
+	else:
+		return intToStr(n//base,base) + convertString[n%base]
 
 # Checks if the file sets exist
 def checkExist(fileSet):
@@ -46,10 +56,23 @@ def check(fileSet):
 		newLine = fileCopy.find('\n')
 		if newLine != -1:
 			fileCopy = fileCopy[:(newLine-1)]
+		chksum = file.find(';')
+		if chksum != -1:
+			crc = file[chksum+1:].upper()
+			file = file[:chksum]
+
 		if os.path.exists(fileCopy):
-			pass
+			if chksum != -1:
+				checkFile = open(fileCopy, 'rb')
+				buffr = checkFile.read(bufferSize)
+				crcvalue = 0
+				while len(buffr) > 0:
+					crcvalue = zlib.crc32(buffr, crcvalue)
+					buffr = checkFile.read(bufferSize)
+				if intToStr(crcvalue, 16) != crc:
+					missing += [file + '\nwas corrupted: CRC-32 DIDN\'T MATCH ' + intToStr(crcvalue, 16) + ':'+ crc]
 		else:
-			missing += [file]
+			missing += [file + '\nwas missing']
 	return(missing)
 
 # Prints out the missing files from a set
@@ -62,7 +85,7 @@ def printMissing(missingList, printLines):
 		if printLines:
 			clear()
 		print('='*80)
-		print('The following files were missing:')
+		print('The following files were missing or corrupted:')
 		print('='*80)
 		print('\n'+filesMissing[:-1])
 	else:
@@ -72,7 +95,7 @@ def printMissing(missingList, printLines):
 		if not printLines:
 			print('No files were missing! (^ Make sure everything you need checked was found)')
 		else:
-			print('No files were missing!')
+			print('No files were missing or corrupted!')
 
 # Loading items json file
 while True:
@@ -128,7 +151,7 @@ else:
 
 # Printing missing files
 for file in filesFound:
-	filesMissing = check(file)
+	filesMissing += check(file)
 printMissing(filesMissing,False)
 
 # Prepping the file set options for manual checking
