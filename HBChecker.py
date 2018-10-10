@@ -150,6 +150,10 @@ while True:
 			itemsFile = itemsFileCopy
 		if itemsFile[-1:] == ' ':
 			itemsFile = itemsFile[:-1]
+		if itemsFile[1:] == '"':
+			itemsFile = itemsFile[:1]
+		if itemsFile[-1:] == '"':
+			itemsFile = itemsFile[:-1]
 
 		if itemsFile == '':
 			quit()
