@@ -1,5 +1,5 @@
 # HBChecker by Epicpkmn11
-# https://github.com/Epicpkmn11/DSi-HB-Checker/
+# https://github.com/Epicpkmn11/HBChecker/
 # Feel free to make custom HBCheckerItems.py files for other uses
 
 import os
@@ -41,11 +41,32 @@ def intToStr(n,base):
 def checkExist(fileSet):
 	found = []
 	file = fileSets[fileSet][0]
+	chksum = file.find(';')
+	if chksum != -1:
+		crc = file[chksum+1:].upper()
+		file = file[:chksum]
 	newLine = file.find('\n')
 	if newLine != -1:
 		file = file[:(newLine-1)]
+
 	if os.path.exists(file):
-		found = [fileSet]
+		if checkCRC:
+			if chksum != -1:
+				checkFile = open(file, 'rb')
+				buffr = checkFile.read(bufferSize)
+				crcValue = 0
+				while len(buffr) > 0:
+					crcValue = zlib.crc32(buffr, crcValue)
+					buffr = checkFile.read(bufferSize)
+				crcString = intToStr(crcValue, 16)
+				while len(crcString)<8:
+					crcString = '0' + crcString
+				if crcString == crc:
+					found = [fileSet]
+			else:
+				found = [fileSet]
+		else:
+			found = [fileSet]
 	return(found)
 
 # Checks if the files within a set exist
@@ -118,9 +139,18 @@ while True:
 		clear()
 		print('='*80)
 		print(itemsFile + ' not found')
-		print('Please input an items file or press Enter to quit')
+		print('Please type the name of an items file, Drag/Drop it here, or press Enter to quit')
 		print('='*80)
 		itemsFile =  input('> ')
+		while itemsFile.find('\\') != -1:
+			bkslsh = itemsFile.find('\\')
+			itemsFileCopy = itemsFile
+			itemsFileCopy = itemsFile[:bkslsh]
+			itemsFileCopy += itemsFile[bkslsh+1:]
+			itemsFile = itemsFileCopy
+		if itemsFile[-1:] == ' ':
+			itemsFile = itemsFile[:-1]
+
 		if itemsFile == '':
 			quit()
 
