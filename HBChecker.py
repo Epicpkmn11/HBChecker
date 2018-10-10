@@ -143,7 +143,7 @@ while True:
 		print('='*80)
 		itemsFile =  input('> ')
 		# Remove \ on non windows systems
-		if sys.platform != 'win32'
+		if sys.platform != 'win32':
 			while itemsFile.find('\\') != -1:
 				bkslsh = itemsFile.find('\\')
 				itemsFileCopy = itemsFile
