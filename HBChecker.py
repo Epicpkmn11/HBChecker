@@ -142,14 +142,18 @@ while True:
 		print('Please type the name of an items file, Drag/Drop it here, or press Enter to quit')
 		print('='*80)
 		itemsFile =  input('> ')
-		while itemsFile.find('\\') != -1:
-			bkslsh = itemsFile.find('\\')
-			itemsFileCopy = itemsFile
-			itemsFileCopy = itemsFile[:bkslsh]
-			itemsFileCopy += itemsFile[bkslsh+1:]
-			itemsFile = itemsFileCopy
+		# Remove \ on non windows systems
+		if sys.platform != 'win32'
+			while itemsFile.find('\\') != -1:
+				bkslsh = itemsFile.find('\\')
+				itemsFileCopy = itemsFile
+				itemsFileCopy = itemsFile[:bkslsh]
+				itemsFileCopy += itemsFile[bkslsh+1:]
+				itemsFile = itemsFileCopy
+		# Remove spaces from end of file names (Mac puts them on drag/drop)
 		if itemsFile[-1:] == ' ':
 			itemsFile = itemsFile[:-1]
+		# Remove " from file names (Windows puts them on drag/drop)
 		if itemsFile[1:] == '"':
 			itemsFile = itemsFile[:1]
 		if itemsFile[-1:] == '"':
