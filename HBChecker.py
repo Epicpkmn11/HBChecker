@@ -154,8 +154,8 @@ while True:
 		if itemsFile[-1:] == ' ':
 			itemsFile = itemsFile[:-1]
 		# Remove " from file names (Windows puts them on drag/drop)
-		if itemsFile[1:] == '"':
-			itemsFile = itemsFile[:1]
+		if itemsFile[:1] == '"':
+			itemsFile = itemsFile[1:]
 		if itemsFile[-1:] == '"':
 			itemsFile = itemsFile[:-1]
 
