@@ -90,7 +90,7 @@ def check(fileSet):
 					buffr = checkFile.read(bufferSize)
 					crcValue = 0
 					while len(buffr) > 0:
-						crcValue = zlib.crc32(buffr, crcValue)
+						crcValue = zlib.crc32(buffr, crcValue) & 0xffffffff
 						buffr = checkFile.read(bufferSize)
 					crcString = intToStr(crcValue, 16)
 					while len(crcString)<8:
