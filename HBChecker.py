@@ -74,14 +74,14 @@ def check(fileSet):
 	missing = []
 	files = fileSets[fileSet][1:]
 	for file in files:
-		fileCopy = file
-		newLine = fileCopy.find('\n')
-		if newLine != -1:
-			fileCopy = fileCopy[:(newLine-1)]
 		chksum = file.find(';')
 		if chksum != -1:
 			crc = file[chksum+1:].upper()
 			file = file[:chksum]
+		fileCopy = file
+		newLine = fileCopy.find('\n')
+		if newLine != -1:
+			fileCopy = fileCopy[:(newLine-1)]
 
 		if os.path.exists(fileCopy):
 			if checkCRC:
