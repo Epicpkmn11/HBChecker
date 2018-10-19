@@ -2,7 +2,7 @@
 	"1 HiyaCFW Main": [
 		"bootcode.dsi \nThis is used to determine what to check",
 		"bootcode.dsi \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';1D44C301",
-		"hiya/bootloader.nds \nFrom HiyaCFW Helper's 'out/hiya' folder;1C99BBC5",
+		"hiya/bootloader.nds \nFrom HiyaCFW Helper's 'out' folder;1C99BBC5",
 		"shared1/TWLCFG0.dat \nFrom your NAND backup",
 		"shared1/TWLCFG1.dat \nFrom your NAND backup",
 		"shared2/0000 \nFrom your NAND backup",
@@ -15,22 +15,22 @@
 	],
 	"2 HiyaCFW USA": [
 		"title/00030017/484e4145/content/00000002.app \nThis is used to determine what to check",
-		"title/00030017/484e4145/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;6BCD2F1A",
+		"title/00030017/484e4145/content/00000002.app \nFrom HiyaCFW Helper's 'out' folder;6BCD2F1A",
 		"title/00030017/484e4145/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';DE189355"
 	],
 	"3 HiyaCFW JPN": [
 		"title/00030017/484e414a/content/00000002.app \nThis is used to determine what to check",
-		"title/00030017/484e414a/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;5AD1E7DB",
+		"title/00030017/484e414a/content/00000002.app \nFrom HiyaCFW Helper's 'out' folder;5AD1E7DB",
 		"title/00030017/484e414a/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';91AE0ADF"
 	],
 	"4 HiyaCFW EUR": [
 		"title/00030017/484e4150/content/00000002.app \nThis is used to determine what to check",
-		"title/00030017/484e4150/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;DE48C860",
+		"title/00030017/484e4150/content/00000002.app \nFrom HiyaCFW Helper's 'out' folder;DE48C860",
 		"title/00030017/484e4150/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';E8E990CE"
 	],
 	"5 HiyaCFW AUS": [
 		"title/00030017/484e4155/content/00000002.app \nThis is used to determine what to check",
-		"title/00030017/484e4155/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;12954987",
+		"title/00030017/484e4155/content/00000002.app \nFrom HiyaCFW Helper's 'out' folder;12954987",
 		"title/00030017/484e4155/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';9DCABB04"
 		],
 	"6 TWLMenu++": [
