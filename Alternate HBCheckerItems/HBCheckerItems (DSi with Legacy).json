@@ -1,5 +1,20 @@
 {
-	"1 HiyaCFW Main": [
+	"01 HiyaCFW unlaunch 1.8+": [
+		"hiya.dsi \nThis is used to determine what to check",
+		"hiya.dsi \nFrom the downloaded 'HiyaCFW/for SDNAND SD card' (Formerly bootcode.dsi);1D44C301",
+		"hiya/bootloader.nds \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;1C99BBC5",
+		"shared1/TWLCFG0.dat \nFrom your NAND backup",
+		"shared1/TWLCFG1.dat \nFrom your NAND backup",
+		"shared2/0000 \nFrom your NAND backup",
+		"shared2/launcher/wrap.bin \nFrom your NAND backup",
+		"sys/cert.sys \nFrom your NAND backup",
+		"sys/dev.kp \nFrom your NAND backup",
+		"sys/HWID.sgn \nFrom your NAND backup",
+		"sys/HWINFO_N.dat \nFrom your NAND backup",
+		"sys/HWINFO_S.dat \nFrom your NAND backup",
+		"sys/TWLFontTable.dat \nFrom your NAND backup;F1953B32"
+	],
+	"02 HiyaCFW unlaunch <1.8": [
 		"bootcode.dsi \nThis is used to determine what to check",
 		"bootcode.dsi \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';1D44C301",
 		"hiya/bootloader.nds \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;1C99BBC5",
@@ -14,27 +29,27 @@
 		"sys/HWINFO_S.dat \nFrom your NAND backup",
 		"sys/TWLFontTable.dat \nFrom your NAND backup;F1953B32"
 	],
-	"2 HiyaCFW USA": [
+	"03 HiyaCFW USA": [
 		"title/00030017/484e4145/content/00000002.app \nThis is used to determine what to check",
 		"title/00030017/484e4145/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;6BCD2F1A",
 		"title/00030017/484e4145/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';DE189355"
 	],
-	"3 HiyaCFW JPN": [
+	"04 HiyaCFW JPN": [
 		"title/00030017/484e414a/content/00000002.app \nThis is used to determine what to check",
 		"title/00030017/484e414a/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;5AD1E7DB",
 		"title/00030017/484e414a/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';91AE0ADF"
 	],
-	"4 HiyaCFW EUR": [
+	"05 HiyaCFW EUR": [
 		"title/00030017/484e4150/content/00000002.app \nThis is used to determine what to check",
 		"title/00030017/484e4150/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;DE48C860",
 		"title/00030017/484e4150/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';E8E990CE"
 	],
-	"5 HiyaCFW AUS": [
+	"06 HiyaCFW AUS": [
 		"title/00030017/484e4155/content/00000002.app \nThis is used to determine what to check",
 		"title/00030017/484e4155/content/00000002.app \nFrom the downloaded 'HiyaCFW/for PC/Modified Files' after running HiyaCFW Helper;05338600",
 		"title/00030017/484e4155/content/title.tmd \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';9DCABB04"
 		],
-	"6 TWLMenu++": [
+	"07 TWLMenu++": [
 		"_nds/TWiLightMenu/main.srldr \nThis is used to determine what to check",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu'",
 		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'TWiLightMenu'",
@@ -60,7 +75,7 @@
 		"title/00030015/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root'",
 		"title/00030015/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root'"
 	],
-	"7 TWLMenu++ 6.4.4": [
+	"08 TWLMenu++ 6.4.4": [
 		"_nds/TWiLightMenu/main.srldr \nThis is used to determine what to check;7E3AD804",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu';94F1395C",
 		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'TWiLightMenu';7B551EBC",
@@ -87,7 +102,7 @@
 		"title/00030015/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';94F1395C",
 		"title/00030015/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';5313BDA5"
 	],
-	"8 DSiMenuPP 6.2.0": [
+	"09 DSiMenuPP 6.2.0": [
 		"_nds/dsimenuplusplus/release-bootstrap.ver \nThis is used to determine what to check",
 		"BOOT.NDS \nFrom the downloaded 'DSiMenuPP'",
 		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'DSiMenuPP'",
@@ -113,7 +128,7 @@
 		"title/00030015/53524c41/content/00000000.app \nFrom the downloaded 'DSiMenuPP/CFW - SDNAND root'",
 		"title/00030015/53524c41/content/title.tmd \nFrom the downloaded 'DSiMenuPP/CFW - SDNAND root'"
 	],
-	"9 DSiMenuPP 6.0.0": [
+	"10 DSiMenuPP 6.0.0": [
 		"_nds/dsimenuplusplus/release-bootstrap \nThis is used to determine what to check",
 		"BOOT.NDS \nFrom the downloaded 'DSiMenuPP'",
 		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'DSiMenuPP'",

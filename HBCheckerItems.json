@@ -1,7 +1,7 @@
 {
 	"1 HiyaCFW Main": [
-		"bootcode.dsi \nThis is used to determine what to check",
-		"bootcode.dsi \nFrom the downloaded 'HiyaCFW/for SDNAND SD card';1D44C301",
+		"hiya.dsi \nThis is used to determine what to check",
+		"hiya.dsi \nFrom the downloaded 'HiyaCFW/for SDNAND SD card' (Formerly bootcode.dsi);1D44C301",
 		"hiya/bootloader.nds \nFrom HiyaCFW Helper's 'out' folder;1C99BBC5",
 		"shared1/TWLCFG0.dat \nFrom your NAND backup",
 		"shared1/TWLCFG1.dat \nFrom your NAND backup",
