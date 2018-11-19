@@ -20,6 +20,10 @@ fileSets = {}
 itemsFile = 'HBCheckerItems.json'
 bufferSize = 65536
 checkCRC = True
+if sys.platform == 'win32':
+	columns = 80
+else:
+	columns = int(os.popen('stty size', 'r').read().split()[1])
 
 # Defining functions
 # Allows clearing the screen on win32 & unix-based systems
@@ -110,17 +114,17 @@ def printMissing(missingList, printLines):
 	if len(filesMissing)>0:
 		if printLines:
 			clear()
-		print('='*80)
+		print('='*columns)
 		if checkCRC:
 			print('The following files were missing or corrupted:')
 		else:
 			print('The following files were missing:')
-		print('='*80)
+		print('='*columns)
 		print('\n'+filesMissing[:-1])
 	else:
 		if printLines:
 			clear()
-		print('='*80)
+		print('='*columns)
 		if not printLines:
 			print('No files were missing! (^ Make sure everything you need checked was found)')
 		else:
@@ -137,10 +141,10 @@ while True:
 		break
 	except:
 		clear()
-		print('='*80)
+		print('='*columns)
 		print(itemsFile + ' not found')
 		print('Please type the name of an items file, Drag/Drop it here, or press Enter to quit')
-		print('='*80)
+		print('='*columns)
 		itemsFile =  input('> ')
 		# Remove \ on non windows systems
 		if sys.platform != 'win32':
@@ -189,13 +193,13 @@ for file in filesFound:
 # Printing sets found
 if len(fileFoundList)>0:
 	clear()
-	print('='*80)
+	print('='*columns)
 	if filesFoundAmount>1:
 		print(fileFoundList + ' were found')
 	else:
 		print(fileFoundList + ' was found')
 else:
-	print('='*80)
+	print('='*columns)
 	print('Nothing was found')
 
 # Printing missing files
@@ -222,7 +226,7 @@ for fileSet in sorted(fileSets):
 # Infinite loop so you can check as many options as you want
 while True:
 	clearScreen = True
-	print('='*80)
+	print('='*columns)
 	print('Would you like to check for more?')
 	if checkCRC:
 		print('Your options are:\n(Enter the number, 0 to disable checksum, or press Enter to quit)')
@@ -240,7 +244,7 @@ while True:
 				checkCRC = True
 			clearScreen = False
 			clear()
-			print('='*80)
+			print('='*columns)
 			if checkCRC:
 				print('Corruption detection enabled')
 			else:
@@ -252,5 +256,5 @@ while True:
 			break
 	if clearScreen:
 		clear()
-		print('='*80)
+		print('='*columns)
 		print('Invalid File Set')
