@@ -21,18 +21,16 @@ itemsFile = 'HBCheckerItems.json'
 bufferSize = 65536
 checkCRC = True
 if sys.platform == 'win32':
-	try:
-		def columns():
+	def columns():
+		try:
 			return os.get_terminal_size(sys.__stdout__.fileno()).columns
-	except:
-		def columns():
+		except:
 			return 120	
 else:
-	try:
-		def columns():
+	def columns():
+		try:
 			return int(os.popen('stty size', 'r').read().split()[1])
-	except:
-		def columns():
+		except:
 			return 80
 
 # Defining functions
