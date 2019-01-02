@@ -1,5 +1,5 @@
 {
-	"1 TWLMenu++ 6.8.3.1": [
+	"1 TWLMenu++ 6.8.3.2": [
 		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;9CE7F348",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu';8D96E900",
 		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'TWiLightMenu';2AACDC03",
@@ -9,7 +9,7 @@
 		"_nds/nds-bootstrap-nightly.nds \nFrom the downloaded 'TWiLightMenu';0594D92B",
 		"_nds/nds-bootstrap-release.nds \nFrom the downloaded 'TWiLightMenu';0594D92B",
 		"_nds/nds-bootstrap.ini \nFrom the downloaded 'TWiLightMenu'",
-		"_nds/TWiLightMenu/akmenu.srldr \nFrom the downloaded 'TWiLightMenu';FE5B3B73",
+		"_nds/TWiLightMenu/akmenu.srldr \nFrom the downloaded 'TWiLightMenu';11928463",
 		"_nds/TWiLightMenu/dsimenu.srldr \nFrom the downloaded 'TWiLightMenu';66DD2600",
 		"_nds/TWiLightMenu/gbaswitch.srldr \nFrom the downloaded 'TWiLightMenu';14A26AE9",
 		"_nds/TWiLightMenu/main.srldr \nFrom the downloaded 'TWiLightMenu';100B6322",
