@@ -1,2 +1,2 @@
-.DS_Store
-Alternate HBCheckerItems/.DS_Store
+*.DS_Store
+.vscode
