@@ -36,7 +36,6 @@
 	"6 TWLMenu++": [
 		"_nds/TWiLightMenu/main.srldr \nThis is used to determine what to check",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu' (Only needed for DSiWareHax)",
-		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/nds-bootstrap-hb-release.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
@@ -52,7 +51,7 @@
 		"_nds/TWiLightMenu/nightly-bootstrap.ver \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/TWiLightMenu/r4menu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/TWiLightMenu/release-bootstrap.ver \nFrom the downloaded 'TWiLightMenu/_nds/'",
-		"_nds/TWiLightMenu/settings.srldr \nFrom the downloaded 'TWiLightMenu';FD72E56A",
+		"_nds/TWiLightMenu/settings.srldr \nFrom the downloaded 'TWiLightMenu'",
 		"_nds/TWiLightMenu/slot1launch.srldr \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/TWiLightMenu/emulators/gameyob.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/TWiLightMenu/emulators/jEnesisDS.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
