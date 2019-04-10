@@ -35,7 +35,7 @@
 		],
 	"6 TWLMenu++": [
 		"_nds/TWiLightMenu/main.srldr \nThis is used to determine what to check",
-		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu' (Only needed for DSiWareHax)",
+		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu'",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/nds-bootstrap-hb-release.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
@@ -43,7 +43,6 @@
 		"_nds/nds-bootstrap-gbar2-release.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/nds-bootstrap-nightly.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/nds-bootstrap-release.nds \nFrom the downloaded 'TWiLightMenu/_nds/'",
-		"_nds/nds-bootstrap.ini \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/TWiLightMenu/akmenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/TWiLightMenu/dsimenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/'",
 		"_nds/TWiLightMenu/gbaswitch.srldr \nFrom the downloaded 'TWiLightMenu/_nds/'",
