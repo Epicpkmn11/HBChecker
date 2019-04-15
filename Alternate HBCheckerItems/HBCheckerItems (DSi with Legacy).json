@@ -346,5 +346,33 @@
 		"title/00030015/534c524e/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';E1D196FE",
 		"title/00030015/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';8D96E900",
 		"title/00030015/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';5313BDA5"
+	],
+	"18 TWLMenu++ 6.8.1": [
+		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;1131BA3C",
+		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu';821A1CE8",
+		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'TWiLightMenu';2AACDC03",
+		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu';72504844",
+		"_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded 'TWiLightMenu';1823A929",
+		"_nds/nds-bootstrap-hb-release.nds \nFrom the downloaded 'TWiLightMenu';1823A929",
+		"_nds/nds-bootstrap-nightly.nds \nFrom the downloaded 'TWiLightMenu';F7CF066A",
+		"_nds/nds-bootstrap-release.nds \nFrom the downloaded 'TWiLightMenu';F7CF066A",
+		"_nds/nds-bootstrap.ini \nFrom the downloaded 'TWiLightMenu'",
+		"_nds/TWiLightMenu/akmenu.srldr \nFrom the downloaded 'TWiLightMenu';8D0601B2",
+		"_nds/TWiLightMenu/dsimenu.srldr \nFrom the downloaded 'TWiLightMenu';D4353826",
+		"_nds/TWiLightMenu/gbaswitch.srldr \nFrom the downloaded 'TWiLightMenu';14A26AE9",
+		"_nds/TWiLightMenu/main.srldr \nFrom the downloaded 'TWiLightMenu';100B6322",
+		"_nds/TWiLightMenu/mainmenu.srldr \nFrom the downloaded 'TWiLightMenu';1131BA3C",
+		"_nds/TWiLightMenu/nightly-bootstrap.ver \nFrom the downloaded 'TWiLightMenu';B68EBF4C",
+		"_nds/TWiLightMenu/r4menu.srldr \nFrom the downloaded 'TWiLightMenu';EA6FBF88",
+		"_nds/TWiLightMenu/release-bootstrap.ver \nFrom the downloaded 'TWiLightMenu';7EADFA04",
+		"_nds/TWiLightMenu/slot1launch.srldr \nFrom the downloaded 'TWiLightMenu';BD2C1959",
+		"_nds/TWiLightMenu/emulators/gameyob.nds \nFrom the downloaded 'TWiLightMenu';DE56C324",
+		"_nds/TWiLightMenu/emulators/nesds.nds \nFrom the downloaded 'TWiLightMenu';D64FBA8A",
+		"_nds/TWiLightMenu/emulators/nestwl.nds \nFrom the downloaded 'TWiLightMenu';04C4C8C8",
+		"hiya/autoboot.bin \nFrom the downloaded 'TWiLightMenu/Autoboot for HiyaCFW';267D3542",
+		"title/00030015/534c524e/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';2A259C60",
+		"title/00030015/534c524e/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';E1D196FE",
+		"title/00030015/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';8D96E900",
+		"title/00030015/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/CFW - SDNAND root';5313BDA5"
 	]
 }
