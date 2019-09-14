@@ -1,5 +1,39 @@
 {
-	"1 TWLMenu++ 9.0.2": [
+	"1 TWLMenu++ 9.4.0": [
+		"_nds/TWiLightMenu/dsimenu.srldr \nThis is used to determine what to check;D03C54FC",
+		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';FE098CC0",
+		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';97E5610D",
+		"_nds/GBARunner2_wramicache.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';5E4FBDCE",
+		"_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';01CD152E",
+		"_nds/nds-bootstrap-hb-release.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';396016CC",
+		"_nds/nds-bootstrap-nightly.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';0A0ED42C",
+		"_nds/nds-bootstrap-release.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';268E33AB",
+		"_nds/TWiLightMenu/akmenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';D4315A98",
+		"_nds/TWiLightMenu/bootplg.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';552F5DC6",
+		"_nds/TWiLightMenu/dsimenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';D03C54FC",
+		"_nds/TWiLightMenu/gbaswitch.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';14A26AE9",
+		"_nds/TWiLightMenu/main.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';AAF83BFB",
+		"_nds/TWiLightMenu/mainmenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';F9965D87",
+		"_nds/TWiLightMenu/nightly-bootstrap.ver \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';CF932137",
+		"_nds/TWiLightMenu/r4menu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';D44F1E2D",
+		"_nds/TWiLightMenu/release-bootstrap.ver \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';3585C369",
+		"_nds/TWiLightMenu/settings.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';5EEE36B3",
+		"_nds/TWiLightMenu/slot1launch.srldr \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';0F2DF1FE",
+		"_nds/TWiLightMenu/emulators/gameyob.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';DE56C324",
+		"_nds/TWiLightMenu/emulators/jEnesisDS.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';F1525562",
+		"_nds/TWiLightMenu/emulators/nesds.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';D64FBA8A",
+		"_nds/TWiLightMenu/emulators/nestwl.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';04C4C8C8",
+		"_nds/TWiLightMenu/emulators/S8DS_notouch.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';B947E98B",
+		"_nds/TWiLightMenu/emulators/S8DS.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';2233AD09",
+		"_nds/TWiLightMenu/emulators/S8DS07.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';EF14FC01",
+		"_nds/TWiLightMenu/emulators/SNEmulDS.nds \nFrom the downloaded 'TWiLightMenu/_nds/TWiLightMenu/';024028F0",
+		"hiya/autoboot.bin \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/hiya/';FDFF3471",
+		"title/00030015/534c524e/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';07E94619",
+		"title/00030015/534c524e/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';E1D196FE",
+		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';FE098CC0",
+		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';41903894"
+	],
+	"2 TWLMenu++ 9.0.2": [
 		"_nds/TWiLightMenu/dsimenu.srldr \nThis is used to determine what to check;8F22FFEE",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';CB757DA2",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';80A33FF4",
@@ -33,7 +67,7 @@
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';CB757DA2",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';41903894"
 	],
-	"2 TWLMenu++ 9.0.0": [
+	"3 TWLMenu++ 9.0.0": [
 		"_nds/TWiLightMenu/dsimenu.srldr \nThis is used to determine what to check;0960FC12",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';CB757DA2",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';80A33FF4",
@@ -67,7 +101,7 @@
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';CB757DA2",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';41903894"
 	],
-	"3 TWLMenu++ 8.5.0": [
+	"4 TWLMenu++ 8.5.0": [
 		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;8C279C36",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';A1B36ACA",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';0E604F51",
@@ -101,7 +135,7 @@
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';A1B36ACA",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';48142249"
 	],
-	"4 TWLMenu++ 8.4.0": [
+	"5 TWLMenu++ 8.4.0": [
 		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;3A748C71",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';EAF6ECE2",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';D1CE6BA0",
@@ -135,7 +169,7 @@
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';6CEDFE12",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';AB46BFE5"
 	],
-	"5 TWLMenu++ 8.2.3": [
+	"6 TWLMenu++ 8.2.3": [
 		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;DFD2320F",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';EAF6ECE2",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';D303D016",
@@ -170,7 +204,7 @@
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';EAF6ECE2",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';AB46BFE5"
 	],
-	"6 TWLMenu++ 8.0.0": [
+	"7 TWLMenu++ 8.0.0": [
 		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;491C629C",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';EAF6ECE2",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';D303D016",
@@ -205,7 +239,7 @@
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';5D65C9E4",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';AB46BFE5"
 	],
-	"7 TWLMenu++ 7.4.1": [
+	"8 TWLMenu++ 7.4.1": [
 		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;3DE987A4",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';5D65C9E4",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';72504844",
@@ -239,7 +273,7 @@
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';95A4F99E",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';AB46BFE5"
 	],
-	"8 TWLMenu++ 7.3.0": [
+	"9 TWLMenu++ 7.3.0": [
 		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;5A2D69C6",
 		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/';95A4F99E",
 		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/DSi&3DS - SD card users/_nds/';72504844",
@@ -272,39 +306,6 @@
 		"title/00030015/534c524e/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';72C9DBA7",
 		"title/00030015/534c524e/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';E1D196FE",
 		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';95A4F99E",
-		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';AB46BFE5"
-	],
-	"9 TWLMenu++ 7.2.0": [
-		"_nds/TWiLightMenu/mainmenu.srldr \nThis is used to determine what to check;B3F82975",
-		"BOOT.NDS \nFrom the downloaded 'TWiLightMenu/_nds/';D7C7A6C5",
-		"_nds/GBARunner2_fc.nds \nFrom the downloaded 'TWiLightMenu/_nds/';2AACDC03",
-		"_nds/GBARunner2.nds \nFrom the downloaded 'TWiLightMenu/_nds/';72504844",
-		"_nds/nds-bootstrap-hb-nightly.nds \nFrom the downloaded 'TWiLightMenu/_nds/';E12BCF03",
-		"_nds/nds-bootstrap-hb-release.nds \nFrom the downloaded 'TWiLightMenu/_nds/';E12BCF03",
-		"_nds/nds-bootstrap-gbar2-nightly.nds \nFrom the downloaded 'TWiLightMenu/_nds/';1823A929",
-		"_nds/nds-bootstrap-gbar2-release.nds \nFrom the downloaded 'TWiLightMenu/_nds/';1823A929",
-		"_nds/nds-bootstrap-nightly.nds \nFrom the downloaded 'TWiLightMenu/_nds/';79DD97A3",
-		"_nds/nds-bootstrap-release.nds \nFrom the downloaded 'TWiLightMenu/_nds/';79DD97A3",
-		"_nds/nds-bootstrap.ini \nFrom the downloaded 'TWiLightMenu/_nds/'",
-		"_nds/TWiLightMenu/akmenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';EB9B687B",
-		"_nds/TWiLightMenu/dsimenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';582CFA4A",
-		"_nds/TWiLightMenu/gbaswitch.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';14A26AE9",
-		"_nds/TWiLightMenu/main.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';7709EB16",
-		"_nds/TWiLightMenu/mainmenu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';B3F82975",
-		"_nds/TWiLightMenu/nightly-bootstrap.ver \nFrom the downloaded 'TWiLightMenu/_nds/';7F0C7C2F",
-		"_nds/TWiLightMenu/r4menu.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';26646240",
-		"_nds/TWiLightMenu/release-bootstrap.ver \nFrom the downloaded 'TWiLightMenu/_nds/';2C95D5A3",
-		"_nds/TWiLightMenu/settings.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';FD72E56A",
-		"_nds/TWiLightMenu/slot1launch.srldr \nFrom the downloaded 'TWiLightMenu/_nds/';24DF34B0",
-		"_nds/TWiLightMenu/emulators/gameyob.nds \nFrom the downloaded 'TWiLightMenu/_nds/';DE56C324",
-		"_nds/TWiLightMenu/emulators/jEnesisDS.nds \nFrom the downloaded 'TWiLightMenu/_nds/';F1525562",
-		"_nds/TWiLightMenu/emulators/nesds.nds \nFrom the downloaded 'TWiLightMenu/_nds/';D64FBA8A",
-		"_nds/TWiLightMenu/emulators/nestwl.nds \nFrom the downloaded 'TWiLightMenu/_nds/';04C4C8C8",
-		"_nds/TWiLightMenu/emulators/SNEmulDS.nds \nFrom the downloaded 'TWiLightMenu/_nds/';024028F0",
-		"hiya/autoboot.bin \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';FDFF3471",
-		"title/00030015/534c524e/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';7F42B039",
-		"title/00030015/534c524e/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';E1D196FE",
-		"title/00030004/53524c41/content/00000000.app \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';82AE69B1",
 		"title/00030004/53524c41/content/title.tmd \nFrom the downloaded 'TWiLightMenu/DSi - CFW users/SDNAND root/';AB46BFE5"
 	]
 }
